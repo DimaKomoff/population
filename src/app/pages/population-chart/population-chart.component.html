@@ -1,0 +1,16 @@
+<div class="chart-container" *ngIf="!isLoaded">Loading...</div>
+<div class="chart-container" *ngIf="isLoaded">
+  <h1>Slovak Republic population in 1990</h1>
+  <ngx-charts-bar-vertical
+    [results]="single"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+</div>
+
