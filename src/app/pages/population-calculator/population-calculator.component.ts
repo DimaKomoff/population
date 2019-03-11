@@ -13,6 +13,7 @@ export class PopulationCalculatorComponent implements OnInit {
 
   form: FormGroup;
   remainingData: RemainingInfoType;
+  defaultCounties: Array<string> = ['Ukraine', 'Uganda'];
   countriesList: Array<string> = [];
   sexSelect = SEX_SELECT;
   lastQueries: Array<RemainingInfoType> = [];
@@ -28,6 +29,9 @@ export class PopulationCalculatorComponent implements OnInit {
     }
     this.initForm();
     this.getCountries();
+    if (this.countriesList.length === 0) {
+      this.countriesList = this.defaultCounties;
+    }
   }
 
   private initForm() {
